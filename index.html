@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Tailwind element-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"]
+          }
+        },
+        corePlugins: {
+          preflight: false
+        }
+      };
+    </script>
+    <!-- end Tailwind element -->
+    <style>
+      .flot {
+        animation: float 3s linear infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0rem);
+        }
+
+        50% {
+          transform: translateY(-3.5rem);
+        }
+      }
+      .trans {
+        transition: all 0.1s linear;
+      }
+      @keyframes trans {
+        0%,
+        100% {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Main navigation container -->
+    <nav
+      class="flex w-full flex-wrap items-center justify-between py-5 shadow-dark-mild dark:bg-neutral-700 lg:py-4"
+      data-twe-navbar-ref
+    >
+      <div
+        class="fixed top-0 left-0 z-10 rounded-b-md p-15 background-radial-gradient flex w-full flex-wrap items-center justify-between px-3"
+      >
+        <div>
+          <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">
+            <img
+              class="me-2"
+              src="images/images/logo.png"
+              style="height: 50px"
+              alt="Logo"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <!-- Hamburger button for mobile view -->
+        <button
+          class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button"
+          data-twe-collapse-init
+          data-twe-target="#navbarSupportedContent4"
+          aria-controls="navbarSupportedContent4"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Hamburger icon -->
+          <span
+            class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </button>
+
+        <!-- Collapsible navbar container -->
+        <div
+          class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+          id="navbarSupportedContent4"
+          data-twe-collapse-item
+        >
+          <!-- Left links -->
+          <ul
+            class="list-style-none me-auto flex flex-col ps-1 lg:mt-1 lg:flex-row"
+            data-twe-navbar-nav-ref
+          >
+            <!-- Home link -->
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <a
+                class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                aria-current="page"
+                href="#"
+                data-twe-nav-link-ref
+                >Home</a
+              >
+            </li>
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <a
+                class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                aria-current="page"
+                href="#"
+                data-twe-nav-link-ref
+                >Assessments</a
+              >
+            </li>
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <a
+                class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                aria-current="page"
+                href="#"
+                data-twe-nav-link-ref
+                >Labayh Business
+              </a>
+            </li>
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <a
+                class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                aria-current="page"
+                href="#"
+                data-twe-nav-link-ref
+                >Specialists
+              </a>
+            </li>
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <a
+                class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                aria-current="page"
+                href="#"
+                data-twe-nav-link-ref
+              >
+                Join therapists</a
+              >
+            </li>
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <a
+                class="text-white transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                aria-current="page"
+                href="#"
+                data-twe-nav-link-ref
+              >
+                Blog</a
+              >
+            </li>
+            <li
+              class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 hiddne flex lg:flex-row lg: flex-col flex-col items-center justify-center space-y-5 font-bold"
+              data-twe-nav-item-ref
+            >
+              <div class="relative" data-twe-dropdown-ref>
+                <a
+                  class="text-white flex items-center justify-center transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                  href="#"
+                  type="button"
+                  id="dropdownMenuButton2"
+                  data-twe-dropdown-toggle-ref
+                  aria-expanded="false"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                >
+                  Services
+                  <span class="ms-2 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <ul
+                  class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                  aria-labelledby="dropdownMenuButton2"
+                  data-twe-dropdown-menu-ref
+                >
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Another action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      href="#"
+                      data-twe-dropdown-item-ref
+                      >Something else here</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="flex items-center flex justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 translate-x-8 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+
+            <button
+              type="button"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+              class="bg-[#5ba2d8] me-3 inline-block rounded-full px-10 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+            >
+              Download App
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- تجربة -->
+
+    <!-- Section: Design Block -->
+    <section class="background-radial-gradient mb-10 rounded-b-lg">
+      <style>
+        .background-radial-gradient {
+          background-color: hsl(218, 41%, 15%);
+          background-image: radial-gradient(
+              0px circle at 10% 10%,
+              #5ba2d8 15%,
+              #0f68a0 35%,
+              #8ac751 75%,
+              #349946 80%,
+              transparent 100%
+            ),
+            radial-gradient(
+              1250px circle at 100% 100%,
+              hsl(218, 41%, 45%) 15%,
+              hsl(218, 41%, 30%) 35%,
+              hsl(218, 41%, 20%) 75%,
+              hsl(218, 41%, 19%) 80%,
+              transparent 100%
+            );
+        }
+      </style>
+
+      <!-- Jumbotron -->
+
+      <div class="px-10 py-12 text-center md:px-12 lg:text-left">
+        <div
+          class="w-100 mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl"
+        >
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="mt-12 lg:mt-0">
+              <h1
+                class="mt-0 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-[hsl(218,81%,95%)]"
+              >
+                The best offer <br /><span class="text-[hsl(218,81%,75%)]"
+                  >for your business</span
+                >
+              </h1>
+              <a
+                class="mb-2 inline-block rounded bg-neutral-50 px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-neutral-800 shadow-[0_4px_9px_-4px_#cbcbcb] transition duration-150 ease-in-out hover:bg-neutral-100 hover:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:bg-neutral-100 focus:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(251,251,251,0.3)] dark:hover:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] dark:focus:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] dark:active:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] md:mr-2 md:mb-0"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                href="#!"
+                role="button"
+                >Get started</a
+              >
+              <a
+                class="inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-200 focus:text-neutral-200 focus:outline-none focus:ring-0 active:text-neutral-300"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                href="#!"
+                role="button"
+                >Learn more</a
+              >
+            </div>
+            <div class="mb-12 lg:mb-0">
+              <img
+                src=" images/images/img-slider.png"
+                class="flot 3s linear infinite; w-full rounded-lg dark:shadow-black/20"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jumbotron -->
+    </section>
+    <!-- Section: Design Block -->
+
+    <!-- Container for demo purpose -->
+    <div class="container my-30 mx-auto md:px-6">
+      <!-- Section: Design Block -->
+      <section class="mb-10 text-center lg:text-left">
+        <div
+          class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+        >
+          <div class="flex flex-wrap items-center">
+            <div
+              class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12"
+            >
+              <img
+                data-aos="fade-right"
+                src="images/images/iPhoneLight.png "
+                alt="Trendy Pants and Shoes"
+                class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              />
+            </div>
+            <div
+              data-aos="fade-left"
+              class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12"
+            >
+              <div class="px-6 py-12 md:px-12">
+                <h2
+                  class="display-5 mb-6 text-4xl font-bold text-primary dark:text-primary-400"
+                >
+                  Why is it so great?
+                </h2>
+                <p class="mb-12 text-neutral-500 dark:text-neutral-300">
+                  Nunc tincidunt vulputate elit. Mauris varius purus malesuada
+                  neque iaculis malesuada. Aenean gravida magna orci, non
+                  efficitur est porta id. Donec magna diam.
+                </p>
+
+                <div class="grid md:grid-cols-3 lg:gap-x-12">
+                  <div class="mb-12 md:mb-0">
+                    <h2
+                      class="mb-4 text-3xl font-bold text-primary dark:text-primary-400"
+                    >
+                      1000
+                    </h2>
+                    <h5
+                      class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300"
+                    >
+                      Happy customers
+                    </h5>
+                  </div>
+
+                  <div class="mb-12 md:mb-0">
+                    <h2
+                      class="mb-4 text-3xl font-bold text-primary dark:text-primary-400"
+                    >
+                      70%
+                    </h2>
+                    <h5
+                      class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300"
+                    >
+                      Growth
+                    </h5>
+                  </div>
+
+                  <div class="">
+                    <h2
+                      class="mb-4 text-3xl font-bold text-primary dark:text-primary-400"
+                    >
+                      49
+                    </h2>
+                    <h5
+                      class="mb-0 text-lg font-medium text-neutral-500 dark:text-neutral-300"
+                    >
+                      Projects
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+    <!-- Container for demo purpose -->
+    <!-- Container for demo purpose -->
+    <div class="container my-24 mx-auto md:px-6">
+      <!-- Section: Design Block -->
+      <section class="mb-32 text-center">
+        <div class="flex justify-center">
+          <div class="max-w-[700px] text-center">
+            <h2
+              class="mb-6 text-center text-3xl font-bold"
+              data-aos="flip-left"
+            >
+              Why is it so<u class="text-primary dark:text-primary-400">
+                great?</u
+              >
+            </h2>
+            <p
+              class="mb-16 text-neutral-500 dark:text-neutral-300"
+              data-aos="flip-down"
+            >
+              Minus fuga aliquid vero facere ducimus quos, quisquam nemo?
+              Molestias ullam provident vitae error aliquam dolorum temporibus?
+              Doloremque, quasi
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-aos="zoom-in"
+          class="grid gap-x-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+        >
+          <div
+            class="group hover:shadow-lg hover:rounded hover:text-white hover:bg-sky-500 hover:ring-sky-500 mb-12 lg:mb-0"
+          >
+            <div
+              class="m-5 group-hover:decoration-inherit mb-10 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="group-hover:text-green-500 h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                />
+              </svg>
+            </div>
+            <h5 class="group-hover:text-white mb-4 text-lg font-bold">
+              Support 24/7
+            </h5>
+            <p
+              class="group-hover:text-neutral-300 text-neutral-500 dark:text-neutral-300"
+            >
+              Laudantium totam quas cumque pariatur at doloremque hic quos quia
+              eius. Reiciendis optio minus mollitia rerum labore
+            </p>
+          </div>
+
+          <div
+            class="group hover:shadow-lg hover:rounded hover:text-white hover:bg-sky-500 hover:ring-sky-500 mb-12 mb-12 lg:mb-0"
+          >
+            <div
+              class="m-5 mb-6 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="group-hover:text-green-500 h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"
+                />
+              </svg>
+            </div>
+            <h5 class="mb-4 text-lg font-bold">Safe and solid</h5>
+            <p
+              class="group-hover:text-neutral-300 text-neutral-500 dark:text-neutral-300"
+            >
+              Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
+              aspernatur odio soluta, quisquam dolore animi
+            </p>
+          </div>
+
+          <div
+            class="group hover:shadow-lg hover:rounded hover:text-white hover:bg-sky-500 hover:ring-sky-500 mb-12 md:mb-0"
+          >
+            <div
+              class="m-5 mb-6 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="group-hover:text-green-500 h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                />
+              </svg>
+            </div>
+            <h5 class="group-hover:text-white mb-4 text-lg font-bold">
+              Extremely fast
+            </h5>
+            <p
+              class="group-hover:text-neutral-300 text-neutral-500 dark:text-neutral-300"
+            >
+              Enim cupiditate, minus nulla dolor cumque iure eveniet facere
+              ullam beatae hic voluptatibus dolores exercitationem
+            </p>
+          </div>
+
+          <div
+            class="group hover:shadow-lg hover:rounded hover:text-white hover:bg-sky-500 hover:ring-sky-500 mb-12 md:mb-0"
+          >
+            <div
+              class="m-5 mb-6 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="group-hover:text-green-500 h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"
+                />
+              </svg>
+            </div>
+            <h5 class="group-hover:text-whit mb-4 text-lg font-bold">
+              Live analytics
+            </h5>
+            <p
+              class="group-hover:text-neutral-300 text-neutral-500 dark:text-neutral-300"
+            >
+              Illum doloremque ea, blanditiis sed dolor laborum praesentium
+              maxime sint, consectetur atque ipsum ab adipisci
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+    <!-- Container for demo purpose -->
+
+    <!-- Container for demo purpose -->
+    <div class="container my-24 mx-auto md:px-6">
+      <!-- Section: Design Block -->
+      <section class="mb-32 text-center">
+        <h2 class="mb-12 text-3xl font-bold">
+          Meet the <u class="text-primary dark:text-primary-400">team</u>
+        </h2>
+
+        <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
+          <div class="mb-6 lg:mb-0">
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+            >
+              <div
+                data-aos="zoom-out-down"
+                class="relative overflow-hidden bg-cover bg-no-repeat"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/6.jpg"
+                  class="w-full rounded-t-lg"
+                />
+                <a href="#!">
+                  <div
+                    class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+                  ></div>
+                </a>
+                <svg
+                  class="absolute text-white dark:text-neutral-700 left-0 bottom-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1440 320"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="p-6">
+                <h5 class="mb-4 text-lg font-bold">Maria Smith</h5>
+                <p class="mb-4 text-neutral-500 dark:text-neutral-300">
+                  Frontend Developer
+                </p>
+                <ul class="mx-auto flex list-inside justify-center">
+                  <a href="#!" class="px-2">
+                    <!-- GitHub -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-4 w-4 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#!" class="px-2">
+                    <!-- Twitter -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-4 w-4 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#!" class="px-2">
+                    <!-- Linkedin -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-3.5 w-3.5 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                      />
+                    </svg>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6 lg:mb-0">
+            <div
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+              class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+            >
+              <div
+                data-aos="zoom-out-right"
+                class="relative overflow-hidden bg-cover bg-no-repeat"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/8.jpg"
+                  class="w-full rounded-t-lg"
+                />
+                <a href="#!">
+                  <div
+                    class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+                  ></div>
+                </a>
+                <svg
+                  class="absolute text-white dark:text-neutral-700 left-0 bottom-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1440 320"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="p-6">
+                <h5 class="mb-4 text-lg font-bold">Darren Randolph</h5>
+                <p class="mb-4 text-neutral-500 dark:text-neutral-300">
+                  Marketing expert
+                </p>
+                <ul class="mx-auto flex list-inside justify-center">
+                  <a href="#!" class="px-2">
+                    <!-- Facebook -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 text-primary dark:text-primary-400"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#!" class="px-2">
+                    <!-- Twitter -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-4 w-4 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#!" class="px-2">
+                    <!-- Linkedin -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-3.5 w-3.5 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                      />
+                    </svg>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+            >
+              <div
+                data-aos="zoom-out-left"
+                class="relative overflow-hidden bg-cover bg-no-repeat"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/15.jpg"
+                  class="w-full rounded-t-lg"
+                />
+                <a href="#!">
+                  <div
+                    class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+                  ></div>
+                </a>
+                <svg
+                  class="absolute text-white dark:text-neutral-700 left-0 bottom-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1440 320"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="p-6">
+                <h5 class="mb-4 text-lg font-bold">Ayat Black</h5>
+                <p class="mb-4 text-neutral-500 dark:text-neutral-300">
+                  Web designer
+                </p>
+                <ul class="mx-auto flex list-inside justify-center">
+                  <a href="#!" class="px-2">
+                    <!-- Dribbble -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-4 w-4 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#!" class="px-2">
+                    <!-- Linkedin -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-3.5 w-3.5 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#!" class="px-2">
+                    <!-- Instagram -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="h-4 w-4 text-primary dark:text-primary-400"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+    <!-- Container for demo purpose -->
+
+    <!--Carousel-->
+    <!--Carousel-->
+    <div
+      id="carouselExampleCaptions"
+      class="relative"
+      data-twe-carousel-init
+      data-twe-carousel-slide
+    >
+      <div
+        class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+      >
+        <!--First Testimonial / Carousel item-->
+        <div
+          class="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-twe-carousel-active
+          data-twe-carousel-item
+          style="backface-visibility: hidden"
+        >
+          <div class="mb-6 mt-12 flex justify-center">
+            <div class="mb-10 md:mb-0">
+              <!--hier-->
+              <div class="mb-3 flex justify-center">
+                <img
+                  src="images/images/layout.svg"
+                  class="w-32 rounded-full shadow-lg dark:shadow-black/20"
+                />
+              </div>
+              <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+              <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+                Web Developer
+              </h6>
+
+              <ul class="mb-0 flex justify-center">
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 96 960 960"
+                    class="w-5 text-warning"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                    />
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 96 960 960"
+                    class="w-5 text-warning"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                    />
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 96 960 960"
+                    class="w-5 text-warning"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                    />
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 96 960 960"
+                    class="w-5 text-warning"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                    />
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 96 960 960"
+                    class="w-5 text-warning"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--Second Testimonial / Carousel item-->
+        <div
+          class="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-twe-carousel-item
+          style="backface-visibility: hidden"
+        >
+          <!--هنا بعمله-->
+          <div class="mb-10 md:mb-0">
+            <!--hier-->
+            <div class="mb-3 flex justify-center">
+              <img
+                src="images/images/smartphone.svg"
+                class="w-32 rounded-full shadow-lg dark:shadow-black/20"
+              />
+            </div>
+            <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+            <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+              Web Developer
+            </h6>
+
+            <ul class="mb-0 flex justify-center">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Third Testimonial / Carousel item-->
+        <div
+          class="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-twe-carousel-item
+          style="backface-visibility: hidden"
+        >
+          <div class="mb-10 md:mb-0">
+            <!--hier-->
+            <div class="mb-3 flex justify-center">
+              <img
+                src="images/images/photography-of-a-guy-wearing-green-shirt-1222271.jpg"
+                class="w-32 rounded-full shadow-lg dark:shadow-black/20"
+              />
+            </div>
+            <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+            <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+              Web Developer
+            </h6>
+
+            <ul class="mb-0 flex justify-center">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 96 960 960"
+                  class="w-5 text-warning"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--Carousel Controls - prev item-->
+      <button
+        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none dark:text-white dark:opacity-50 dark:hover:text-white dark:focus:text-white"
+        type="button"
+        data-twe-target="#carouselExampleCaptions"
+        data-twe-slide="prev"
+      >
+        <span class="inline-block h-8 w-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </span>
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Previous</span
+        >
+      </button>
+      <!--Carousel Controls - next item-->
+      <button
+        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none dark:text-white dark:opacity-50 dark:hover:text-white dark:focus:text-white"
+        type="button"
+        data-twe-target="#carouselExampleCaptions"
+        data-twe-slide="next"
+      >
+        <span class="inline-block h-8 w-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </span>
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Next</span
+        >
+      </button>
+    </div>
+
+    <!--YYYYYYYYYYYYYYYYYYYYY-->
+    <!-- Container for demo purpose -->
+    <!-- Container for demo purpose -->
+    <div class="container my-24 mx-auto md:px-6">
+      <!-- Section: Design Block -->
+      <section class="mb-32 text-center md:text-left">
+        <h2 class="mb-12 text-center text-3xl font-bold">Latest articles</h2>
+
+        <div class="mb-12 grid items-center gap-x-6 md:grid-cols-2 xl:gap-x-12">
+          <div class="mb-6 md:mb-0">
+            <div
+              class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              data-aos="zoom-in-down"
+            >
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/city/018.jpg"
+                class="w-full"
+                alt="Louvre"
+              />
+              <a href="#!">
+                <div
+                  class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"
+                ></div>
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="fade-up-left">
+            <h3 class="mb-3 text-2xl font-bold">Welcome to California</h3>
+            <div
+              class="mb-3 flex items-center justify-center text-sm font-medium text-danger dark:text-danger-500 md:justify-start"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="mr-2 h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+                />
+              </svg>
+              Travels
+            </div>
+            <p class="mb-6 text-neutral-500 dark:text-neutral-300">
+              <small
+                >Published <u>13.01.2022</u> by
+                <a href="#!">Anna Maria Doe</a></small
+              >
+            </p>
+            <p class="text-neutral-500 dark:text-neutral-300">
+              Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat
+              vulputate. Ut vulputate est non quam dignissim elementum. Donec a
+              ullamcorper diam.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-12 grid items-center gap-x-6 md:grid-cols-2 xl:gap-x-12">
+          <div class="mb-6 md:order-2 md:mb-0">
+            <div
+              class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              data-aos="zoom-in"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/032.jpg"
+              class="data-aos="fade-up" data-aos-duration="3000" w-full"
+              alt="Louvre" />
+              <a href="#!">
+                <div
+                  class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"
+                ></div>
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="flip-down" class="md:order-1">
+            <h3 class="mb-3 text-2xl font-bold">Exhibition in Paris</h3>
+            <div
+              class="mb-3 flex items-center justify-center text-sm font-medium text-primary dark:text-primary-400 md:justify-start"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="mr-2 h-4 w-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+                />
+              </svg>
+              Art
+            </div>
+            <p class="mb-6 text-neutral-500 dark:text-neutral-300">
+              <small
+                >Published <u>12.01.2022</u> by
+                <a href="#!">Halley Frank</a></small
+              >
+            </p>
+            <p class="text-neutral-500 dark:text-neutral-300">
+              Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet diam
+              orci, nec ornare metus semper sed. Integer volutpat ornare erat
+              sit amet rutrum.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-12 grid items-center gap-x-6 md:grid-cols-2 xl:gap-x-12">
+          <div class="mb-6 md:mb-0">
+            <div
+              class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              data-aos="zoom-in-up"
+            >
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/city/059.jpg"
+                class="w-full"
+                alt="Louvre"
+              />
+              <a href="#!">
+                <div
+                  class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"
+                ></div>
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3 class="mb-3 text-2xl font-bold">Stock market boom</h3>
+            <div
+              class="mb-3 flex items-center justify-center text-sm font-medium text-yellow-600 md:justify-start"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="mr-2 h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+                />
+              </svg>
+              Business
+            </div>
+            <p class="mb-6 text-neutral-500 dark:text-neutral-300">
+              <small
+                >Published <u>10.01.2022</u> by <a href="#!">Joe Svan</a></small
+              >
+            </p>
+            <p class="text-neutral-500 dark:text-neutral-300">
+              Curabitur tristique, mi a mollis sagittis, metus felis mattis
+              arcu, non vehicula nisl dui quis diam. Mauris ut risus eget massa
+              volutpat feugiat. Donec.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+    <!-- Container for demo purpose -->
+    <!--Footer container-->
+    <footer
+      class="background-radial-gradient rounded-md flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white"
+    >
+      <div class="container m-10 px-10 pt-10">
+        <!-- Social media icons container -->
+        <div class="mb-6 flex justify-center lg:space-x-14 md:space-x-7">
+          <a
+            href="#!"
+            type="button"
+            class="rounded-full bg-[#3b5998] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+          >
+            <span class="[&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 320 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <a
+            href="#!"
+            type="button"
+            class="rounded-full bg-[#55acee] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+          >
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <a
+            href="#!"
+            type="button"
+            class="rounded-full bg-[#dd4b39] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+          >
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 488 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <a
+            href="#!"
+            type="button"
+            class="rounded-full bg-[#ac2bac] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+          >
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 448 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <a
+            href="#!"
+            type="button"
+            class="rounded-full bg-[#0082ca] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+          >
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 448 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <a
+            href="#!"
+            type="button"
+            class="rounded-full bg-[#333333] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+          >
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 496 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!--Copyright section-->
+
+      <div class="w-full bg-black/5 p-4 text-center text-white">
+        © 2024 Copyright:
+        <a href="">Zeyad Abdoh</a>
+      </div>
+    </footer>
+
+    <!-- Container for demo purpose -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+  </body>
+</html>
